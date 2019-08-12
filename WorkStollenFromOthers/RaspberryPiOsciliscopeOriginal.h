@@ -19,7 +19,8 @@ static ssize_t device_write(struct file *, const char *, size_t, loff_t *);
 #define BUF_LEN 80
 
 /* setting and macros for the GPIO connections */
-#define BCM2708_PERI_BASE 0x20000000
+//#define BCM2708_PERI_BASE 0x20000000
+#define BCM2708_PERI_BASE 0x3F000000
 #define GPIO_BASE (BCM2708_PERI_BASE + 0x20000000)
 
 #define INP_GPIO(g) *(gpio.addr + ((g)/10)) &= ~(7<<(((g)%10)*3))
